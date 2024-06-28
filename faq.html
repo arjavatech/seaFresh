@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header {
+            background-color: white;
+            padding: 20px 0;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .faq-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        .faq-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .sub-title {
+            color: #007bff;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .main-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        body {
+            background-color: #f4f4f9;
+        }
+        .accordion-button::after {
+            /* content: '\002B'; Unicode character for '+' */
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+        }
+        /* .accordion-button:not(.collapsed)::after {
+            content: '\2212'; /* Unicode character for '−' */
+        */
+        .accordion-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            color: #000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .accordion-button:hover {
+            background-color: #e9ecef;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+        }
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+        }
+        .accordion-body {
+            font-weight: normal;
+            background-color: #ffffff;
+            padding: 1rem;
+            border: 1px solid #e9ecef;
+            border-top: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+       .accordion-item {
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FAQ Section -->
+    <div class="container text-center mt-5">
+        <h1 class="faq-title">FAQs</h1>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="faq-section text-center">
+        <div class="container">
+            <div class="sub-title">Fresh From Sea</div>
+            <div class="main-title">How does it work?</div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class=" accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How is my seafood selected and sourced from India?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Add your content here -->
+                         <p> We have our in-house team of fish experts who are highly trained, experienced and well connected with local fisher men. The fish we buy are first quality hook catch fish that are usually priced high in the market. To give you the best quality, the fish we buy are caught over night from the sea, cut, cleaned and packed the same day and shipped the following night. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What is special about Meet UR Fish?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Add your content here -->
+                         <p>At Meet UR Fish, we supply only fresh fish which are never frozen. We focus primarily on Indian varieties of fish. Our fish are cut, cleaned and Pan ready for our fish lovers to cook easily and spend their valuable time on other activities. We provide the option of Doorstep delivery as well Pick up options in stores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How is the freshness of the fish maintained while shipped from India?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Add your content here -->
+                        <p>The fish we purchase are first quality hook catch fish which are packed and shipped overnight. To maintain the freshness of the fish, it is maintained in 0°C to 4°C through their air travel. No Preservative or chemical added.</p>
+                </div>
+            </div>
+        </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Is the fish Wild caught or farmed raised?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <!-- Add your content here -->
+                         <p>All our fish are wild caught, we have many varieties of fish that are caught in sea (Salt water), and we also have few varieties which are Fresh water fish, like Rohu, Murrel etc. We do not get any farm raised fish.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can the fish be freezed for later use?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- Add your content here -->
+                            <p>Yes! We deliver it fresh, and it is never frozen, but you can freeze it in the same packaging immediately upon receipt for later purpose.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How to pick the right fish for me?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- Add your content here -->
+                             <p>We understand that not everyone is a fish lover or expert, but would like to try something new, Reach out to us and let our team of seafood connoisseurs guide you through an unforgettable culinary experience. Contact us through the form below or WhatsApp or text or call to +1 972-750-0490</p>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
