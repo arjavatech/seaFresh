@@ -228,7 +228,7 @@
 @media (min-width: 992px) {
     .hero-header,
     .page-header {
-        margin-top: 115px !important;
+        margin-top: 110px !important;
     }
 }
 
@@ -498,7 +498,7 @@
 /*** Footer End ***/
 
 .head_logo {
-    width: 100px; 
+    width: 90px; 
     height: auto; 
     margin-right: 10px; 
 }
