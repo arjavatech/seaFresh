@@ -149,3 +149,27 @@
 
 })(jQuery);
 
+// Read more function
+
+function updateCardHeights() {
+    let maxHeight = 0;
+    $('.vesitable-item').each(function () {
+        let thisHeight = $(this).height();
+        if (thisHeight > maxHeight) {
+            maxHeight = thisHeight;
+        }
+    });
+    $('.vesitable-item').height(maxHeight);
+}
+
+updateCardHeights(); // Ensure all cards have the same initial height
+
+$('.read-more').click(function () {
+    let moreText = $(this).siblings('.more-content').html();
+    let moreTitle = $(this).siblings('.readmore-heading').text();
+    $('.render-readmore').html(moreText);
+    $('.fish-title').html(moreTitle);
+
+});
+
+

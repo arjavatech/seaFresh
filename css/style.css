@@ -537,3 +537,17 @@
 .copyright .text-light a {
     color: #ff8701;
 }
+.more-content {
+    display: none;
+}
+
+.read-more {
+    cursor: pointer;
+}
+.banner-content {
+    text-align: center;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    /* opacity: 0.6; */
+}
