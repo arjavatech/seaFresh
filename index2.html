@@ -1163,7 +1163,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/smtp.js"></script>
     <script>
         let btn = document.getElementById('mail-send');
         btn.addEventListener('click', function (e) {
@@ -1176,13 +1176,14 @@
                 SecureToken: "93cd8c35-c30c-4507-9f90-7311ff8dfe5c",
                 To: 'vvrasha336@gmail.com',
                 From: "varsha.arjava@gmail.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
+                Subject: "New Contact Form Submission",
+                Body: "Name: " + cName + "<br>Email: " + cEmail + "<br>Message: " + cMsg
             }).then(
                 message => alert(message)
+            ).catch(
+                error => console.error('Failed to send email:', error)
             );
-
-        })
+        });
     </script>
 </body>
 
