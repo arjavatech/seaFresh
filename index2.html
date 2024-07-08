@@ -1168,10 +1168,10 @@
         let btn = document.getElementById('mail-send');
         btn.addEventListener('click', function (e) {
             e.preventDefault();
-            let Name = document.getElementById('name').value;
-            let Email = document.getElementById('email').value;
-            let Msg = document.getElementById('msg').value;
-            alert(Name)
+            let cName = document.getElementById('name').value;
+            let cEmail = document.getElementById('email').value;
+            let cMsg = document.getElementById('msg').value;
+            
             Email.send({
                 SecureToken: "93cd8c35-c30c-4507-9f90-7311ff8dfe5c",
                 To: 'vvrasha336@gmail.com',
