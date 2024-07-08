@@ -181,7 +181,10 @@
         <div class="container">
             <div class="row g-4 justify-content-center">
                 <div class="offset-md-1 col-md-10">
-                    <p class="banner-content">"SeaFresh ensures the finest quality and freshness in every delivery of fish. While savoring fish at a restaurant is delightful, preparing it at home can be quite a task. At SeaFresh, we pride ourselves on sourcing fresh fish daily from the sea to your table. Visit our shop and experience the difference with every bite."</p>
+                    <p class="banner-content">"SeaFresh ensures the finest quality and freshness in every delivery of
+                        fish. While savoring fish at a restaurant is delightful, preparing it at home can be quite a
+                        task. At SeaFresh, we pride ourselves on sourcing fresh fish daily from the sea to your table.
+                        Visit our shop and experience the difference with every bite."</p>
                 </div>
             </div>
         </div>
@@ -1100,19 +1103,20 @@
                         <form action="" class="">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" class=" w-100 form-control border-0  py-3 mb-4"
+                                    <input id="name" type="text" class=" w-100 form-control border-0  py-3 mb-4"
                                         placeholder="Your Name">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="w-100 form-control border-0 py-3 mb-4"
+                                    <input id="email" type="email" class="w-100 form-control border-0 py-3 mb-4"
                                         placeholder="Enter Your Email">
                                 </div>
                                 <div class="col-md-12">
-                                    <textarea class="w-100 form-control border-0 mb-4" rows="5" cols="10"
+                                    <textarea id="msg" class="w-100 form-control border-0 mb-4" rows="5" cols="10"
                                         placeholder="Your Message"></textarea>
                                 </div>
                                 <div class="col-md-12">
-                                    <button class="w-100 btn form-control border-secondary py-3 bg-white text-primary "
+                                    <button id="mail-send"
+                                        class="w-100 btn form-control border-secondary py-3 bg-white text-primary "
                                         type="submit">Submit</button>
                                 </div>
                             </div>
@@ -1159,6 +1163,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        let btn = document.getElementById('mail-send');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            let Name = document.getElementById('name').value;
+            let Email = document.getElementById('email').value;
+            let Msg = document.getElementById('msg').value;
+            alert(Name)
+            Email.send({
+                SecureToken: "93cd8c35-c30c-4507-9f90-7311ff8dfe5c",
+                To: 'vvrasha336@gmail.com',
+                From: "varsha.arjava@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+
+        })
+    </script>
 </body>
 
 </html>
