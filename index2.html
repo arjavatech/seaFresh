@@ -39,17 +39,17 @@
       function sendEmail(event) {
           event.preventDefault(); // Prevent default form submission
   
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
+          var from_name = document.getElementById("from_name").value;
+          var email_id = document.getElementById("email_id").value;
           var message = document.getElementById("message").value;
   
           // Confirm the user's input
-          var confirmation = confirm("Please confirm your details:\n\nName: " + name + "\nEmail: " + email + "\nMessage: " + message);
+          var confirmation = confirm("Please confirm your details:\n\nName: " + from_name + "\nEmail: " + email_id + "\nMessage: " + message);
   
           if (confirmation) {
               var templateParams = {
-                  name: name,
-                  email: email,
+                  from_name: from_name,
+                  email_id: email_id,
                   message: message
               };
   
@@ -1146,12 +1146,12 @@ background-color:rgba(41, 128, 185,1.0);
                             <div class="row">
                                 <div class="col-md-6">
                                        <label for="name">Name:</label>
-                                    <input id="name" type="text" class=" w-100 form-control border-0  py-3 mb-4"
+                                    <input id="from_name" type="text" class=" w-100 form-control border-0  py-3 mb-4"
                                         placeholder="Your Name">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="email">Email:</label>
-                                    <input id="email" type="email" class="w-100 form-control border-0 py-3 mb-4"
+                                    <input id="email_id" type="email" class="w-100 form-control border-0 py-3 mb-4"
                                         placeholder="Enter Your Email">
                                 </div>
                                 <div class="col-md-12">
