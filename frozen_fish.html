@@ -28,6 +28,8 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript" src="js/emailJs.js"></script>
        
     </head>
 
@@ -44,7 +46,7 @@
         <div class="container-fluid fixed-top">
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index2.html" class="navbar-brand p-0">
+                    <a href="index.html" class="navbar-brand p-0">
                         <!-- <h1 class="text-primary display-6">FishKart</h1> -->
                         <img src="img/logo_final.png" alt="Logo" class="head_logo">
                     </a>
@@ -53,7 +55,7 @@
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="index2.html" class="nav-item nav-link active">Home</a>
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Fresh Fish</a>
                             <a href="frozen_fish.html" class="nav-item nav-link">Frozen Fish</a>
                             <!-- <a href="FAQ.html" class="nav-item nav-link">FAQs</a> -->
@@ -103,12 +105,7 @@
 
         <!-- Single Page Header start -->
         <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-white display-6">Coming Soon</h1>
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-white">Coming Soon</li>
-            </ol>
+            <h1 class="text-center text-white display-6 py-3">Coming Soon</h1>
         </div>
         <!-- Single Page Header End -->
 
@@ -122,7 +119,7 @@
                         <!-- <h1 class="display-1">Coming Soon</h1> -->
                         <h1 class="mb-4">Coming Soon</h1>
                         <!-- <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p> -->
-                        <a class="btn border-secondary rounded-pill py-3 px-5" href="index2.html">Go Back To Home</a>
+                        <a class="btn border-secondary rounded-pill py-3 px-5" href="index.html">Go Back To Home</a>
                     </div>
                 </div>
             </div>
@@ -186,18 +183,18 @@
                     <div class="footer-item" id="contactPage">
                         <h4 class="text-light mb-3">Contact</h4>
                        
-                        <form method="post">
+                        <form onsubmit="sendEmail(event)">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class=" w-100 form-control border-0  py-3 mb-4"
+                                    <input id="from_name" type="text" class=" w-100 form-control border-0  py-3 mb-4"
                                         placeholder="Your Name">
                                 </div>
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="w-100 form-control border-0 py-3 mb-4"
+                                    <input id="email_id" type="email" class="w-100 form-control border-0 py-3 mb-4"
                                         placeholder="Enter Your Email">
                                 </div>
                                 <div class="col-md-12">
-                                    <textarea id="msg" class="w-100 form-control border-0 mb-4" rows="5" cols="10"
+                                    <textarea id="message" class="w-100 form-control border-0 mb-4" rows="5" cols="10"
                                         placeholder="Your Message"></textarea>
                                 </div>
                                 <div class="col-md-12">
