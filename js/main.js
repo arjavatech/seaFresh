@@ -172,4 +172,9 @@ $('.read-more').click(function () {
 
 });
 
+$('#contact-link').click(function (){
+    var element = document.getElementById("navbarCollapse");
+    element.classList.remove("show");
+})
+
 
