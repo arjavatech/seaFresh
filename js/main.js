@@ -176,5 +176,9 @@ $('#contact-link').click(function (){
     var element = document.getElementById("navbarCollapse");
     element.classList.remove("show");
 })
+$('body').on('click', function(e) {
+    var element = document.getElementById("navbarCollapse");
+    element.classList.remove("show");
+})
 
 
