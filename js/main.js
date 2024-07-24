@@ -79,7 +79,7 @@
 
 
     // vegetable carousel
-    $(".vegetable-carousel").owlCarousel({
+    $(".fish-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
         center: false,
@@ -153,13 +153,13 @@
 
 function updateCardHeights() {
     let maxHeight = 0;
-    $('.vesitable-item').each(function () {
+    $('.fish-item').each(function () {
         let thisHeight = $(this).height();
         if (thisHeight > maxHeight) {
             maxHeight = thisHeight;
         }
     });
-    $('.vesitable-item').height(maxHeight);
+    $('.fish-item').height(maxHeight);
 }
 
 updateCardHeights(); // Ensure all cards have the same initial height
