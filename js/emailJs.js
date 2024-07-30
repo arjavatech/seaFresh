@@ -1,5 +1,5 @@
 (function () {
-    emailjs.init("5RV8s_eS5CIp7Hdwb"); // Initialize EmailJS with your user ID
+    emailjs.init("09WUyG4xDo0P7aKDv"); // Initialize EmailJS with your user ID
 })();
 
 function sendEmail(event) {
@@ -19,7 +19,7 @@ function sendEmail(event) {
             message: message
         };
 
-        emailjs.send('service_hio9qp8', 'template_dadvlxi', templateParams) // Use your service ID and template ID
+        emailjs.send('service_g1n2lap', 'template_5xs30qa', templateParams) // Use your service ID and template ID
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Email sent successfully!');
