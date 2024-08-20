@@ -1,21 +1,21 @@
 (function () {
-    emailjs.init("09WUyG4xDo0P7aKDv"); // Initialize EmailJS with your user ID
+    emailjs.init("LEpDSIdmRQqK9mpR7"); // Initialize EmailJS with your user ID
 })();
 
 function sendEmail(event) {
     event.preventDefault(); // Prevent default form submission
 
     var from_name = document.getElementById("from_name").value;
-    var email_id = document.getElementById("email_id").value;
+    var Email_id = document.getElementById("email_id").value;
     var message = document.getElementById("message").value;
 
     // Confirm the user's input
-    var confirmation = confirm("Please confirm your details:\n\nName: " + from_name + "\nEmail: " + email_id + "\nMessage: " + message);
+    var confirmation = confirm("Please confirm your details:\n\nName: " + from_name + "\nEmail: " + Email_id + "\nMessage: " + message);
 
     if (confirmation) {
         var templateParams = {
             from_name: from_name,
-            email_id: email_id,
+            Email_id: Email_id,
             message: message
         };
 
