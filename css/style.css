@@ -246,7 +246,6 @@
     .QR_width {
         width: 30%;
     }
-
 }
 /*** Hero Header end ***/
 
@@ -274,13 +273,48 @@
 
 
 /*** service Start ***/
-.service .service-item .service-content {
+/* .service .service-item .service-content {
     position: relative;
     width: 250px; 
     height: 130px; 
     top: -50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+} */
+.service-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.service-item img {
+    transition: transform 0.3s ease;
+    height: 225px;
+}
+.service-item:hover img {
+    transform: scale(1.1);
+}
+.service-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.service-content h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.service-content h3 {
+    font-size: 24px;
+    margin-bottom: 0;
 }
 
 /*** service End ***/
@@ -463,6 +497,13 @@
 .testimonial .owl-nav .owl-next:hover {
     background: var(--bs-secondary);
     color: var(--bs-white);
+}
+
+@media (max-width: 992px) {
+    .testimonial .owl-nav .owl-next, .testimonial .owl-nav .owl-prev{
+        top: -40px;
+    }
+
 }
 /*** testimonial End ***/
 
