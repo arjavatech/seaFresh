@@ -599,6 +599,11 @@
 .read-more {
     cursor: pointer;
 }
+.read-more span {
+    background-color: #ff8901;
+    border-radius: 10%;
+    padding: 1%;
+}
 .banner-content {
     text-align: center;
     font-size: large;
